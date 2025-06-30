@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeCal Project Files</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Arial', sans-serif; /* Changed font for better Hebrew support */
             margin: 20px;
             background-color: #f4f4f4;
             color: #333;
+            text-align: right; /* Align text to the right for RTL */
         }
         .container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: right; /* Ensure container content is also RTL */
         }
         h1 {
             color: #333;
@@ -47,29 +49,30 @@
         }
         .link-section input[type="text"] {
             padding: 8px;
-            margin-right: 8px;
+            margin-left: 8px; /* Changed margin-right to margin-left for RTL */
             border: 1px solid #ddd;
             border-radius: 4px;
             width: 60%;
+            direction: ltr; /* Keep URL input LTR */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>CodeCal Project Resources</h1>
-        <p>Welcome! Here you can find the Power BI project file (PBIX) for download and the link to the Looker Studio report.</p>
+        <h1>משאבי פרויקט CodeCal</h1>
+        <p>ברוכים הבאים! כאן תוכלו למצוא את קובץ הפרויקט של Power BI (PBIX) להורדה ואת הקישור לדוח Looker Studio.</p>
 
         <div class="link-section">
-            <h2>Power BI Project File</h2>
-            <p>Click the link below to download the PBIX file:</p>
-            <a href="https://drive.google.com/file/d/1lWXOcWRjAsxrMOOf_NWqjzxS8KFO8Gu0/view?usp=sharing" download>Download CodeCal PBIX</a>
+            <h2>קובץ פרויקט Power BI</h2>
+            <p>לחצו על הקישור למטה להורדת קובץ ה-PBIX:</p>
+            <a href="https://drive.google.com/uc?export=download&id=1lWXOcWRjAsxrMOOf_NWqjzxS8KFO8Gu0" target="_blank">הורד CodeCal PBIX (מ-Google Drive)</a>
         </div>
 
         <div class="link-section">
-            <h2>Looker Studio Report</h2>
-            <p>View the report and copy the link below:</p>
+            <h2>דוח Looker Studio</h2>
+            <p>צפו בדוח והעתיקו את הקישור למטה:</p>
             <input type="text" value="https://lookerstudio.google.com/embed/reporting/1b62c5aa-3a85-4a91-9c14-0489703bd13a/page/TnnPF" id="lookerStudioUrl" readonly>
-            <button class="button" onclick="copyToClipboard()">Copy Link</button>
+            <button class="button" onclick="copyToClipboard()">העתק קישור</button>
         </div>
     </div>
 
